@@ -1,0 +1,116 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("https://questzone.com.ua/dist/pict_rooms/Iv2L35Tj.jpg");
+        padding: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        background-size: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .contener {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        width: 85%;
+        background-image: url("https://www.bodo.ua/resize/upload/files/cm-experience/102/101728/images_file/all_all_big-t1604571205-r1w768h425q90zc1.jpg");
+        padding: 20px;
+        border-radius: 20px;
+        margin: auto;
+        background-size: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .contener2 {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+       /* justify-content: center;*/
+        align-items: center;
+        row-gap: 20px;
+        row-gap: 20px;
+        background-size: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://img.freepik.com/premium-photo/horror-background_173387-1447.jpg");
+        padding: 20px;
+        color: lime;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .contener3 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contener4 {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .contener5 {
+        width: 200px;
+        height: auto;
+        word-break: break-word;
+    }
+
+    .style1 {
+        color: lime;
+    }
+
+    .styleButton {
+        justify-content: center;
+        width: 60px;
+        cursor: pointer;
+    }
+</style>
+
+@model IEnumerable<ConferenceLAb.Models.Conferense>
+<div class="contener">
+    @if (Model != null)
+    {
+        //@foreach (BookStore.Models.Book b in Model)
+        @foreach (ConferenceLAb.Models.Conferense item in Model)
+        {
+            <div class="contener2">
+
+                
+               
+                  <div>
+                    <p>Organizers <span>@item.Organizers</span></p>
+                        <br />
+                    <p>Sponsors<span>@item.Sponsors</span></p>
+                        <br />
+                    <p>Program <span>@item.Program</span></p>
+                        <br />
+                    <p>Speakers <span>@item.Speakers</span></p>
+                        <br />
+                      
+
+         
+                    </div>  
+
+            </div>
+        }
+    }
+    <form method="post">
+        <input type="submit" asp-action="Zapolnenia" value="Zapolnenia" />
+    </form>
+
+</div>

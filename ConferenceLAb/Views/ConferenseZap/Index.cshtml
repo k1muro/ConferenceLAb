@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        bacraund-color:rgb(0,0,205);
+    }
+    .stylebody
+    {
+       bacraund-color:rgb(0,0,205); 
+    }
+    .stele1
+    {
+        background-color:grey;
+        padding : 50px;
+        font-family: 'Times New Roman', Times, serif;
+        background-size: no-repeat;
+        background-position: center;
+        background-size: cover;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        border-radius: 20px;
+    }
+
+    .contener {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        width: 85%;
+         background-color:grey;
+        padding: 20px;
+        border-radius: 20px;
+        margin: auto;
+    }
+    .stylecolor
+    {
+        color:lime;
+    }
+
+</style>
+@model Conferens 
+<body class="stylebody">
+    <div class="stele1">
+    <div class="contener">
+        <form method="post" enctype="multipart/form-data">
+            
+            <label class="stylecolor">Введіть організаторів <input asp-for="Organizers" type="text"></label>
+            <br>
+            <label class="stylecolor">Додайте спонсорів <input asp-for="Sponsors" type="text"></label>
+            <br>
+            <label class="stylecolor">Введіть програму <textarea asp-for="Program"></textarea></label>
+            <br />
+            <label class="stylecolor">Введіть інформація про доповідачів та доповіді <textarea asp-for="Speakers"></textarea></label>
+            <br />
+            <label class="stylecolor">Зберегти запис <input class="styleButton" type="submit" value="Save"></label>
+        </form>
+
+    </div>
+</div>
+</body>

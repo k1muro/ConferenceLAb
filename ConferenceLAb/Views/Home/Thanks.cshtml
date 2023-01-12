@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Дякую за регестрацію</h1>
+
+<form asp-action="CodСonfirmation" method="post">
+    <input name="rait" type="text" value="@ViewData["number"]" hidden />
+    <label>Введіть код підтведження<input type="text" name="cod" /></label>
+    <input type="submit" value="Send" />
+</form>

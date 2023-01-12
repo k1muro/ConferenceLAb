@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<ConferenceLAb.Models.User>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (ConferenceLAb.Models.User item in Model)
+            {
+                <tr>
+
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
